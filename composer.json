@@ -18,9 +18,7 @@
         "symfony/symfony": "2.8.0-BETA1"
 
     },
-    "require-dev": {
-        
-    },
+    "require-dev": [],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
