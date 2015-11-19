@@ -16,7 +16,6 @@
         "sensio/framework-extra-bundle": "^3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "symfony/symfony": "2.8.0-BETA1"
-
     },
     "scripts": {
         "post-install-cmd": [

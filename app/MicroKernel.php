@@ -35,22 +35,7 @@ class MicroKernel extends Kernel
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        // load bundles' configuration
-        $c->loadFromExtension('framework', [
-            'secret' => '12345',
-            'profiler' => [
-                'enabled' => true
-            ],
-            'templating' => ['engines' => ['twig']],
-        ]);
-
-        $c->loadFromExtension('web_profiler', ['toolbar' => true]);
-
-        // add configuration parameters
-        $c->setParameter('mail_sender', 'user@example.com');
-
-        // register services
-        $c->register('app.markdown', 'AppBundle\\Service\\Parser\\Markdown');
+        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
     }
 
     public function getRootDir()
