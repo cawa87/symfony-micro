@@ -15,6 +15,8 @@ class MicroKernel extends Kernel
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -31,7 +33,7 @@ class MicroKernel extends Kernel
             $routes->mount('/_profiler', $routes->import('@WebProfilerBundle/Resources/config/routing/profiler.xml'));
         }
 
-        $routes->add('/', 'kernel:indexAction', 'index');
+        $routes->mount('/', $routes->import('@AppBundle/Controller', 'annotation'));
     }
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
@@ -52,10 +54,5 @@ class MicroKernel extends Kernel
     public function getLogDir()
     {
         return dirname(__DIR__).'/var/logs';
-    }
-
-    public function indexAction()
-    {
-        return $this->container->get('templating')->renderResponse('index.html.twig');
     }
 }
