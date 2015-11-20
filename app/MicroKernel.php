@@ -15,6 +15,8 @@ class MicroKernel extends Kernel
         $bundles = array(
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new AppBundle\AppBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -24,28 +26,6 @@ class MicroKernel extends Kernel
         return $bundles;
     }
 
-    public function getRootDir()
-    {
-        return __DIR__;
-    }
-
-    public function getCacheDir()
-    {
-        return dirname(__DIR__) . '/var/cache/' . $this->environment;
-    }
-
-    public function getLogDir()
-    {
-        return dirname(__DIR__) . '/var/logs';
-    }
-
-    public function indexAction()
-    {
-        return new \Symfony\Component\HttpFoundation\Response(
-            $this->container->get('twig')->render('index.html.twig')
-        );
-    }
-
     protected function configureRoutes(RouteCollectionBuilder $routes)
     {
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -53,11 +33,26 @@ class MicroKernel extends Kernel
             $routes->mount('/_profiler', $routes->import('@WebProfilerBundle/Resources/config/routing/profiler.xml'));
         }
 
-        $routes->add('/', 'kernel:indexAction', 'index');
+        $routes->mount('/', $routes->import('@AppBundle/Controller', 'annotation'));
     }
 
     protected function configureContainer(ContainerBuilder $c, LoaderInterface $loader)
     {
-        $loader->load(__DIR__ . '/config/config_' . $this->getEnvironment() . '.yml');
+        $loader->load(__DIR__.'/config/config_'.$this->getEnvironment().'.yml');
+    }
+
+    public function getRootDir()
+    {
+        return __DIR__;
+    }
+
+    public function getCacheDir()
+    {
+        return dirname(__DIR__).'/var/cache/'.$this->environment;
+    }
+
+    public function getLogDir()
+    {
+        return dirname(__DIR__).'/var/logs';
     }
 }
