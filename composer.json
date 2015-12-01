@@ -11,11 +11,11 @@
     },
     "require": {
         "php": ">=5.5.9",
-        "symfony/monolog-bundle": "~2.7@dev",
-        "sensio/distribution-bundle": "~5.0@dev",
+        "symfony/symfony": "3.0.*",
+        "symfony/monolog-bundle": "^2.8",
+        "sensio/distribution-bundle": "^5.0",
         "sensio/framework-extra-bundle": "^3.0.2",
-        "incenteev/composer-parameter-handler": "~2.0",
-        "symfony/symfony": "2.8.0-BETA1"
+        "incenteev/composer-parameter-handler": "^2.0"
     },
     "scripts": {
         "post-install-cmd": [
