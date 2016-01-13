@@ -5,6 +5,7 @@ Symfony micro applicatin based on ```\Symfony\Bundle\FrameworkBundle\Kernel\Micr
 
 [![Latest Stable Version](https://poser.pugx.org/cawakharkov/symfony-micro/v/stable)](https://packagist.org/packages/cawakharkov/symfony-micro) [![Total Downloads](https://poser.pugx.org/cawakharkov/symfony-micro/downloads)](https://packagist.org/packages/cawakharkov/symfony-micro) [![Latest Unstable Version](https://poser.pugx.org/cawakharkov/symfony-micro/v/unstable)](https://packagist.org/packages/cawakharkov/symfony-micro) [![License](https://poser.pugx.org/cawakharkov/symfony-micro/license)](https://packagist.org/packages/cawakharkov/symfony-micro)
 [![Scrutinizer](https://img.shields.io/scrutinizer/g/CawaKharkov/symfony-micro.svg)]()
+[![Travis](https://api.travis-ci.org/CawaKharkov/symfony-micro.svg)]()
 
 
 # Usage
