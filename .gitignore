@@ -39,3 +39,6 @@
 
 .idea
 composer.lock
+
+# bundle bower assets
+src/AppBundle/Resources/public/components
