@@ -2,7 +2,7 @@
     "name": "cawakharkov/symfony-micro",
     "license": "MIT",
     "type": "project",
-    "description": "Demo for Symfony2.8 micro trait application",
+    "description": "Demo for Symfony micro trait application",
     "autoload": {
         "psr-4": { "": "src/" }
     },
@@ -43,7 +43,6 @@
     },
     "extra": {
         "symfony-app-dir": "app",
-        "symfony-console-dir": "bin",
         "symfony-bin-dir": "bin",
         "symfony-var-dir": "var",
         "symfony-web-dir": "web",
