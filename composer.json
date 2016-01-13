@@ -20,6 +20,9 @@
         "doctrine/orm": "^2.5",
         "sensio/generator-bundle": "^3.0"
     },
+    "require-dev": {
+
+    },
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
