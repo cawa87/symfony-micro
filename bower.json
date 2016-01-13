@@ -1,0 +1,25 @@
+{
+  "name": "symfony-micro",
+  "homepage": "https://github.com/CawaKharkov/symfony-micro",
+  "authors": [
+    "Aleksandr Zamiatin <cawa123@mail.ru>"
+  ],
+  "description": "Symfony micro applicatin based on Kernel\\MicroKernelTrait.",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "symfony",
+    "php",
+    "js",
+    "micro",
+    "framework"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
