@@ -7,23 +7,29 @@ Symfony micro applicatin based on ```\Symfony\Bundle\FrameworkBundle\Kernel\Micr
 [![Scrutinizer](https://img.shields.io/scrutinizer/g/CawaKharkov/symfony-micro.svg)]()
 [![Travis](https://api.travis-ci.org/CawaKharkov/symfony-micro.svg)]()
 
+# What's included
+ - Symfony v3.0.*
+ - Doctrine 2.5
+ - Generator-bundle
+ - Uikit
+ - FontAwesome
+
 
 # Usage
-
  * Create project
-
 ```bash
 composer create-project cawakharkov/symfony-micro:dev-master
-
+```
+* Bower
+```bash
+bower install
 ```
  * Run with built in server .
-
 ```bash
 bin/console server:run localhost
 ```
 
 ## Small benchmark
-
 ```
 -> % siege -b -t30S -c 20 http://prod.micro.local/                     
 ** SIEGE 3.0.8
