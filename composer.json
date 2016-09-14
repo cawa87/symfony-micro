@@ -6,7 +6,10 @@
   "autoload": {
     "psr-4": {
       "": "src/"
-    }
+    },
+    "classmap": [
+      "app/MicroKernel.php"
+    ]
   },
   "autoload-dev": {
     "psr-4": {
