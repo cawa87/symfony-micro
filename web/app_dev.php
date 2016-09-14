@@ -19,7 +19,6 @@ if (isset($_SERVER['HTTP_CLIENT_IP'])
 }
 */
 $loader = require __DIR__.'/../app/autoload.php';
-require_once __DIR__.'/../app/MicroKernel.php';
 
 Debug::enable();
 
